@@ -247,7 +247,7 @@ class CosmologicalTools:
         # Integrate y numerically over zrange and return in units of Gyr
         # FILL THIS IN 
         # for whatever reason simps gets rid of the units so you have to add them back. 
-        time = simps(y,zrange)*u.Gyr
+        time = simpson(y,zrange)*u.Gyr
 
         return time
     
@@ -287,7 +287,7 @@ class CosmologicalTools:
     
         
         # Integrate y numerically over zrange and return in units of Mpc 
-        DC = simps(y,zrange)*u.Mpc
+        DC = simpson(y,zrange)*u.Mpc
         
         return DC
     
